@@ -17,7 +17,7 @@ agree_to_tenable_license_agreement=true"
 # install it
 sudo dpkg -i nessus.deb
 # we need to start nessus once for basic config before we can change preferences etc
-/bin/systemctl start nessus.service
+service nessusd start
 # visit the web interface (browsers choke on self-signed ssl just say accept)
 # local linux box uses localhost like this, vps puts your vps ip (we'll change the default port later
 if you don't let us yet)
@@ -27,7 +27,7 @@ https://127.0.01:8834/
 # set a username and password and remember it or write it down or have browser remember it
 # ok now close the browser
 # time to stop the service and do our update and crack
-/bin/systemctl stop nessus.service
+service nessusd stop 
 # let's change the default port to something more obscure so we're not in shodan/censys/fuck-all
 (you do know to do this right? ;) you're welcome
 /opt/nessus/sbin/nessuscli fix --set xmlrpc_listen_port=11111
@@ -58,4 +58,4 @@ chattr +i -R /opt/nessus/lib/nessus/plugins
 chattr -i /opt/nessus/lib/nessus/plugins/plugin_feed_info.inc
 chattr -i /opt/nessus/lib/nessus/plugins
 # time to run the service
-/bin/systemctl start nessusd.service
+service nessusd start
