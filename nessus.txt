@@ -1,4 +1,4 @@
-0## procedure for downloading nessus pro 10.2.0 to ubuntu 22.04
+## procedure for downloading nessus pro 10.2.0 to ubuntu 22.04
 ## First time fresh install. use some other guide for updating.
 ## zen equilibrium
 ## (note there is no registration involved you just download and go)
