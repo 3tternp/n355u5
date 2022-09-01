@@ -7,12 +7,12 @@
 sudo -su
 # let's get curl (not installed by default on ubuntu 22.04) wget if fine but whatever
 apt install curl
-# download the deb package. note "16496" directory is likely specific to this exact nessus
+# download the deb package. note "16870" directory is likely specific to this exact nessus
 version
 # in the future just go to https://www.tenable.com/downloads/nessus?loginAttempted=true and
 find new versions to get url
 curl -A Mozilla -o nessus.deb -k
-"https://www.tenable.com/downloads/api/v1/public/pages/nessus/downloads/16496/download?i_
+"https://www.tenable.com/downloads/api/v1/public/pages/nessus/downloads/16870/download?i_
 agree_to_tenable_license_agreement=true"
 # install it
 sudo dpkg -i nessus.deb
@@ -39,22 +39,21 @@ https://127.0.01:8834/
 /opt/nessus/sbin/nessuscli update all-2.0.tar.gz
 # for me it says:
 # root@u2204:~# /opt/nessus/sbin/nessuscli update all-2.0.tar.gz
-# [info] Copying templates version 202206211520 to /opt/nessus/var/nessus/templates/tmp
+# [info] Copying templates version 202208231901  to /opt/nessus/var/nessus/templates/tmp
 # [info] Finished copying templates.
-# [info] Moved new templates with version 202206211520 from plugins dir.
+# [info] Moved new templates with version 202208231901  from plugins dir.
 # [info] Moved new pendo client with version 21220 from plugins dir.
 # * Update successful. The changes will be automatically processed by Nessus.
-# now we create plugin feed files using that version number above (see the 202206211520)
+# now we create plugin feed files using that version number above (see the 202208231901)
 ###################### snapshot of vm here
 cat > /opt/nessus/var/nessus/plugin_feed_info.inc <<"EOF"
-PLUGIN_SET = "202206211520";
+PLUGIN_SET = "202208231901";
 PLUGIN_FEED = "ProfessionalFeed (Direct)";
 PLUGIN_FEED_TRANSPORT = "Tenable Network Security Lightning";
 EOF
 cp /opt/nessus/var/nessus/plugin_feed_info.inc /opt/nessus/var/nessus/.plugin_feed_info.inc
 # let's set everything immutable
 chattr +i /opt/nessus/var/nessus/plugin_feed_info.inc
-/opt/nessus/var/nessus/.plugin_feed_info.inc
 chattr +i -R /opt/nessus/lib/nessus/plugins
 chattr -i /opt/nessus/lib/nessus/plugins/plugin_feed_info.inc
 chattr -i /opt/nessus/lib/nessus/plugins
