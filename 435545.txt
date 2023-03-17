@@ -38,15 +38,15 @@ service nessusd stop
 /opt/nessus/sbin/nessuscli update all-2.0.tar.gz
 # for me it says:
 # root@u2204:~# /opt/nessus/sbin/nessuscli update all-2.0.tar.gz
-[info] Copying templates version 202302271406 to /opt/nessus/var/nessus/templates/tmp
+[info] Copying templates version 202303071847 to /opt/nessus/var/nessus/templates/tmp
 [info] Finished copying templates.
-[info] Moved new templates with version 202302271406 from plugins dir.
+[info] Moved new templates with version 202303071847 from plugins dir.
 [info] Moved new pendo client with version 21691 from plugins dir.
  * Update successful.  The changes will be automatically processed by Nessus.
 # now we create plugin feed files using that version number above (see the 202208231901)
 ###################### snapshot of vm here
 cat > /opt/nessus/var/nessus/plugin_feed_info.inc <<"EOF"
-PLUGIN_SET = "202302271406";
+PLUGIN_SET = "202303071847";
 PLUGIN_FEED = "ProfessionalFeed (Direct)";
 PLUGIN_FEED_TRANSPORT = "Tenable Network Security Lightning";
 EOF
