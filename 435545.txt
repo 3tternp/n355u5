@@ -1,4 +1,4 @@
-## procedure for downloading nessus pro 10.4.2 to Kali 2023.1
+## procedure for downloading nessus pro 10.5.3 to Kali 2023.2
 ## First time fresh install. use some other guide for updating.
 ## zen equilibrium
 ## (note there is no registration involved you just download and go)
@@ -12,7 +12,7 @@ version
 # in the future just go to https://www.tenable.com/downloads/nessus?loginAttempted=true and
 find new versions to get url
 curl -A Mozilla -o nessus.deb -k
-"https://www.tenable.com/downloads/api/v1/public/pages/nessus/downloads/19226/download?i_agree_to_tenable_license_agreement=true'" 
+"https://www.tenable.com/downloads/api/v1/public/pages/nessus/downloads/19933/download?i_agree_to_tenable_license_agreement=true'" 
 # install it
 sudo dpkg -i nessus.deb
 # we need to start nessus once for basic config before we can change preferences etc
@@ -38,15 +38,15 @@ service nessusd stop
 /opt/nessus/sbin/nessuscli update all-2.0.tar.gz
 # for me it says:
 # root@u2204:~# /opt/nessus/sbin/nessuscli update all-2.0.tar.gz
-[info] Copying templates version 202303071847 to /opt/nessus/var/nessus/templates/tmp
+[info] Copying templates version 202306290637 to /opt/nessus/var/nessus/templates/tmp
 [info] Finished copying templates.
-[info] Moved new templates with version 202303071847 from plugins dir.
+[info] Moved new templates with version 202306290637 from plugins dir.
 [info] Moved new pendo client with version 21691 from plugins dir.
  * Update successful.  The changes will be automatically processed by Nessus.
 # now we create plugin feed files using that version number above (see the 202208231901)
 ###################### snapshot of vm here
 cat > /opt/nessus/var/nessus/plugin_feed_info.inc <<"EOF"
-PLUGIN_SET = "202303071847";
+PLUGIN_SET = "202306290637";
 PLUGIN_FEED = "ProfessionalFeed (Direct)";
 PLUGIN_FEED_TRANSPORT = "Tenable Network Security Lightning";
 EOF
