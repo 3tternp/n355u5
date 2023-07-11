@@ -1,7 +1,8 @@
 #!/bin/bash
 if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
 echo //==============================================================
-echo   Nessus     DOWNLOAD, AND INSTALL,    -ASTRA 20230629 
+echo   Nessus     DOWNLOAD, AND INSTALL
+current_date_time=$(date) 
 echo   Take A Coffee Break and Give it to Me I am Here For U 
 echo //==============================================================
 echo ================================================================
