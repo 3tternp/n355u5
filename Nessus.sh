@@ -1,11 +1,11 @@
 #!/bin/bash
 if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
-echo //==============================================================
+echo ===============================================================
 echo   Nessus     DOWNLOAD, AND INSTALL
-current_date_time=$(date) 
-echo "Current date and time: $current_date_time"
+       current_date_time=$(date) 
+echo   "Current date and time: $current_date_time"
 echo   Take A Coffee Break and Give it to Me I am Here For U 
-echo //==============================================================
+echo ===============================================================
 echo ================================================================
 
 echo "     _    ____ _____ ____      _     __  __"
