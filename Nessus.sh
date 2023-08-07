@@ -24,7 +24,7 @@ echo " o downloading Nessus.."
 curl --request GET \
   --url 'https://www.tenable.com/downloads/api/v2/pages/nessus/files/Nessus-10.5.4-debian10_amd64.deb' \
   --output 'Nessus-10.5.4-debian10_amd64.deb' &>/dev/null
-{ if [ ! -f Nessus-10.5.3-debian10_amd64.deb ]; then
+{ if [ ! -f Nessus-10.5.4-debian10_amd64.deb ]; then
   echo " o nessus download failed :/ exiting. where are you man ?? Are you living in stoneage ??"
   exit 0
 fi }
