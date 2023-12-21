@@ -1,19 +1,5 @@
 #!/bin/bash
 # Display the menu
-while true; do
-    
-  echo -e "\033[36m"
-  echo -e "Choose the operation you want to perform:"
-  echo -e "\033[31m"
-  echo -e "1. Newly Install Nessus"
-  echo -e "\033[32m"
-  echo -e "2. Version and plugin update"
-  echo -e "\033[33m"
-  echo -e "3. Exit"
-  echo -e "\033[39m"
-
-  read count
-   if [ "$count" -eq 1 ]; then
 if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
 echo ===============================================================
 echo   Nessus     DOWNLOAD, AND INSTALL
@@ -31,6 +17,20 @@ echo " /_/   \_\____/ |_| |_| \_\/_/   \_(_)_/\_\ "
 echo "                                            "                                                
 echo "                                             Develop by: PanchingHang" 
 echo =================================================================
+while true; do
+    
+  echo -e "\033[36m"
+  echo -e "Choose the operation you want to perform:"
+  echo -e "\033[31m"
+  echo -e "1. New Install"
+  echo -e "\033[32m"
+  echo -e "2. Version and plugin update"
+  echo -e "\033[33m"
+  echo -e "3. Exit"
+  echo -e "\033[39m"
+
+  read count
+   if [ "$count" -eq 1 ]; then
 echo " >> Update system, install utilities..."
 pacman -Syu libxcrypt-compat --noconfirm &>/dev/null
 pacman -S curl dpkg expect --noconfirm &>/dev/null
