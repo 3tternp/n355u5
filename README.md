@@ -14,6 +14,7 @@ cd n355u5
 bash Nessus.sh _ // without changing permission //_
 
 now change file permission to execute 
+
 chmod +x Nessus.sh 
 
 now execute the script as 
