@@ -1,5 +1,5 @@
 # n355u5
-**#step **
+# steps
 
 clone the repository from github using command 
 
@@ -11,7 +11,7 @@ change the directory
 
 cd n355u5
 
-bash Nessus.sh  // without changing permission //
+bash Nessus.sh _ // without changing permission //_
 
 now change file permission to execute 
 chmod +x Nessus.sh 
