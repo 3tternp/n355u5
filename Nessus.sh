@@ -27,7 +27,7 @@ while true; do
   echo -e "2. Version update"
   echo -e "\033[33m"
   echo -e "3. plugin update only"
-  echo -e "\033[35m"
+  echo -e "\033[32m"
   echo -e "4. Exit"
   echo -e "\033[37m"
 
@@ -41,15 +41,15 @@ pacman -S curl dpkg expect --noconfirm &>/dev/null
 /bin/systemctl stop nessusd.service &>/dev/null
 echo " o downloading Nessus.."
 curl --request GET \
-  --url 'https://www.tenable.com/downloads/api/v2/pages/nessus/files/Nessus-10.7.0-debian10_amd64.deb' \
-  --output 'Nessus-10.7.0-debian10_amd64.deb'&>/dev/null
-{ if [ ! -f Nessus-10.7.0-debian10_amd64.deb ]; then
+  --url 'https://www.tenable.com/downloads/api/v2/pages/nessus/files/Nessus-10.7.1-debian10_amd64.deb' \
+  --output 'Nessus-10.7.1-debian10_amd64.deb'&>/dev/null
+{ if [ ! -f Nessus-10.7.1-debian10_amd64.deb ]; then
   echo " o nessus download failed :/ exiting. where are you man ?? Are you living in stoneage ??"
   exit 0
 fi }
 echo " o installing Nessus.."
-dpkg -i Nessus-10.7.0-debian10_amd64.deb  &>/dev/null
-rm -r Nessus-10.7.0-debian10_amd64.deb  &>/dev/null
+dpkg -i Nessus-10.7.1-debian10_amd64.deb  &>/dev/null
+rm -r Nessus-10.7.1-debian10_amd64.deb  &>/dev/null
 # look I tried to just make changes and run but it doesnt work. if you can optimize
 # what im doing here, let me know.  but this was it for me, it had to be run once :/
 echo " o starting service once FIRST TIME INITIALIZATION (we have to do this)"
@@ -149,15 +149,15 @@ chattr -i -R /opt/nessus/lib/nessus/plugins
 /bin/systemctl stop nessusd.service &>/dev/null
 echo " o downloading Nessus.."
 curl --request GET \
-  --url 'https://www.tenable.com/downloads/api/v2/pages/nessus/files/Nessus-10.7.0-debian10_amd64.deb' \
-  --output 'Nessus-10.7.0-debian10_amd64.deb'&>/dev/null
-{ if [ ! -f Nessus-10.7.0-debian10_amd64.deb ]; then
+  --url 'https://www.tenable.com/downloads/api/v2/pages/nessus/files/Nessus-10.7.1-debian10_amd64.deb' \
+  --output 'Nessus-10.7.1-debian10_amd64.deb'&>/dev/null
+{ if [ ! -f Nessus-10.7.1-debian10_amd64.deb ]; then
   echo " o nessus download failed :/ exiting. where are you man ?? Are you living in stoneage ??"
   exit 0
 fi }
 echo " o installing Nessus.."
-dpkg -i Nessus-10.7.0-debian10_amd64.deb  &>/dev/null
-rm -r Nessus-10.7.0-debian10_amd64.deb  &>/dev/null
+dpkg -i Nessus-10.7.1-debian10_amd64.deb  &>/dev/null
+rm -r Nessus-10.7.1-debian10_amd64.deb  &>/dev/null
 # look I tried to just make changes and run but it doesnt work. if you can optimize
 # what im doing here, let me know.  but this was it for me, it had to be run once :/
 echo " o starting service once FIRST TIME INITIALIZATION (we have to do this)"
@@ -305,7 +305,7 @@ read -p "Press enter to continue"
     # Invalid selection
     echo -e "\033[30m"
     echo -e "Invalid selection. Please try again."
-    echo -e "\033[39m"
+    echo -e "\033[38m"
   fi
 
   # Reset the background color
