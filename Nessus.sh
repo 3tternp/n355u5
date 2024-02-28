@@ -29,7 +29,7 @@ while true; do
   echo -e "3. plugin update only"
   echo -e "\033[32m"
   echo -e "4. Exit"
-  echo -e "\033[33m"
+  echo -e "\033[36m"
 
   read count
   
