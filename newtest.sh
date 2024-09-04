@@ -33,7 +33,7 @@ install_nessus() {
     systemctl stop nessusd.service
 
     echo "Downloading Nessus..."
-    curl -L -o Nessus.deb 'https://www.tenable.com/downloads/api/v2/pages/nessus/files/Nessus-10.8.2-ubuntu16.04_amd64.deb'
+    curl -L -o Nessus.deb 'https://www.tenable.com/downloads/api/v2/pages/nessus/files/Nessus-10.8.2-debian10_amd64.deb'
     if [[ ! -f Nessus.deb ]]; then
         echo "Nessus download failed. Exiting."
         exit 1
