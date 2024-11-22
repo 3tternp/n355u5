@@ -11,9 +11,9 @@ _cd n355u5_
 
 now change file permission to execute 
 
-_chmod +x Nessus.sh _
+_chmod +x Nessus.sh_
 
 now execute the script as 
 
-_sudo ./Nessus.sh _
+_sudo ./Nessus.sh_
 
