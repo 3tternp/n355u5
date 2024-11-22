@@ -3,16 +3,17 @@
 
 clone the repository from github using command 
 
-git clone https://github.com/3tternp/n355u5
+_git clone https://github.com/3tternp/n355u5_
 
 change the directory 
 
-cd n355u5
+_cd n355u5_
 
 now change file permission to execute 
 
-chmod +x Nessus.sh 
+_chmod +x Nessus.sh _
 
 now execute the script as 
-sudo ./Nessus.sh 
+
+_sudo ./Nessus.sh _
 
