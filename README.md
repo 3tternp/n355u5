@@ -5,13 +5,11 @@ clone the repository from github using command
 
 git clone https://github.com/3tternp/n355u5
 
-switch user to root or admin user 
-
 change the directory 
 
 cd n355u5
 
-bash Nessus.sh _ // without changing permission //_
+sudo bash Nessus.sh _ // without changing permission //_
 
 now change file permission to execute 
 
