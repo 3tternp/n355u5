@@ -12,10 +12,6 @@ cat <<'EOF'
 ===============================================================
                      Nessus Installer
 ===============================================================
-
-current_datetime=$(date +"%Y-%m-%d %H:%M:%S.%3N")
-echo "Current date and time: $current_datetime"
-
 Take a coffee break and relax; I'll handle the setup for you!
 ===============================================================
 
