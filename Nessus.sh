@@ -39,6 +39,7 @@ while true; do
   read -p "Enter your choice: " user_choice
 
   case "$user_choice" in
+  
     1) # New Install
     echo " >> Update system, install utilities..."
 pacman -Syu libxcrypt-compat --noconfirm &>/dev/null
@@ -145,7 +146,10 @@ echo "                             username: admin"
 echo "                             you can change this any time"
 echo
 read -p "Press enter to continue"
-
+echo
+     echo "Installation complete!"
+      ;;
+      
     2) # Version Update
       echo "Stopping Nessus service..."
       /bin/systemctl stop nessusd.service &>/dev/null
