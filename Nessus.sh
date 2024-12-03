@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Current date and time: $current_datetime"
+
 # Ensure the script is run as root
 if [[ $(id -u) -ne 0 ]]; then
   echo "Please run as root."
@@ -24,7 +24,7 @@ Take a coffee break and relax; I'll handle the setup for you!
 Developed by: 3tternp  Reference by: PanchingHang
 ===============================================================
 EOF
-
+echo "Current date and time: $current_datetime"
 # Main menu loop
 while true; do
   # Display menu options
