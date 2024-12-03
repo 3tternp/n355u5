@@ -24,7 +24,7 @@ Take a coffee break and relax; I'll handle the setup for you!
 Developed by: 3tternp  Reference by: PanchingHang
 ===============================================================
 EOF
-echo "Current date and time: $current_datetime"
+ echo $(date '+%Y-%m-%d %H:%M:%S')
 # Main menu loop
 while true; do
   # Display menu options
