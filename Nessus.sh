@@ -96,7 +96,7 @@ expect -f expect.tmp &>/dev/null
 rm -rf expect.tmp &>/dev/null
 echo " o downloading new plugins.."
 curl -A Mozilla -o all-2.0.tar.gz \
-  --url 'https://plugins.nessus.org/v2/nessus.php?f=all-2.0.tar.gz&u=4e2abfd83a40e2012ebf6537ade2f207&p=29a34e24fc12d3f5fdfbb1ae948972c6' &>/dev/null
+  --url 'https://plugins.nessus.org/v2/nessus.php?f=all-2.0.tar.gz&u=56b33ade57c60a01058b1506999a2431&p=1ee9c89d5379a119a56498f2d5dff674' &>/dev/null
 { if [ ! -f all-2.0.tar.gz ]; then
   echo " o plugins all-2.0.tar.gz download failed :/ exiting. where r you man ?? get the h3ll out of here to internet zone"
   exit 0
@@ -207,7 +207,7 @@ expect -f expect.tmp &>/dev/null
 rm -rf expect.tmp &>/dev/null
 echo " o downloading new plugins.."
 curl -A Mozilla -o all-2.0.tar.gz \
-  --url 'https://plugins.nessus.org/v2/nessus.php?f=all-2.0.tar.gz&u=4e2abfd83a40e2012ebf6537ade2f207&p=29a34e24fc12d3f5fdfbb1ae948972c6' &>/dev/null
+  --url 'https://plugins.nessus.org/v2/nessus.php?f=all-2.0.tar.gz&u=56b33ade57c60a01058b1506999a2431&p=1ee9c89d5379a119a56498f2d5dff674' &>/dev/null
 { if [ ! -f all-2.0.tar.gz ]; then
   echo " o plugins all-2.0.tar.gz download failed :/ exiting. where r you man ?? get the h3ll out of here to internet zone"
   exit 0
@@ -263,7 +263,7 @@ chattr -i -R /opt/nessus/lib/nessus/plugins
 
 echo " o downloading new plugins.."
 curl -A Mozilla -o all-2.0.tar.gz \
-  --url 'https://plugins.nessus.org/v2/nessus.php?f=all-2.0.tar.gz&u=4e2abfd83a40e2012ebf6537ade2f207&p=29a34e24fc12d3f5fdfbb1ae948972c6' &>/dev/null
+  --url 'https://plugins.nessus.org/v2/nessus.php?f=all-2.0.tar.gz&u=56b33ade57c60a01058b1506999a2431&p=1ee9c89d5379a119a56498f2d5dff674' &>/dev/null
 { if [ ! -f all-2.0.tar.gz ]; then
   echo " o plugins all-2.0.tar.gz download failed :/ exiting. where r you man ?? get the h3ll out of here to internet zone"
   exit 0
@@ -315,3 +315,4 @@ echo -ne '\n  o Done!\n'
       ;;
   esac
 done
+
